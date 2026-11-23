@@ -1,0 +1,64 @@
+// !$*UTF8*$!
+{
+ archiveVersion = 1;
+ classes = { };
+ objectVersion = 56;
+ objects = {
+
+/* Begin PBXBuildFile section */
+  6E64CC9FE7BDED02D647D3E3 /* CookiePortIOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671782466DC2E3EBC9B0A189 /* CookiePortIOSApp.swift */; };
+  A2CA8802D69F4397415B8876 /* PortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B35BDC3A1F5E31EE023848D /* PortViewController.swift */; };
+  CAE20096E9FE983532E5C104 /* AssetSchemeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B30773FD3AF7BAC2548B3D /* AssetSchemeHandler.swift */; };
+  9D31D013C50B1D1BF22B6A85 /* Website in Resources */ = {isa = PBXBuildFile; fileRef = C6EE613B3EB32F24C2C39282 /* Website */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+  671782466DC2E3EBC9B0A189 /* CookiePortIOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookiePortIOSApp.swift; sourceTree = "<group>"; };
+  4B35BDC3A1F5E31EE023848D /* PortViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortViewController.swift; sourceTree = "<group>"; };
+  33B30773FD3AF7BAC2548B3D /* AssetSchemeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetSchemeHandler.swift; sourceTree = "<group>"; };
+  17089704BF5954E6B87ED25A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+  C6EE613B3EB32F24C2C39282 /* Website */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Website; sourceTree = "<group>"; };
+  71CCD365E3A654DA84DBA191 /* CookiePortIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookiePortIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+  424153ED3CD079DB4DB459AF /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = ( ); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+  E2B7E3AD4D3F1D1D50F03CDC = {isa = PBXGroup; children = (E4F9B9B828BD894C7208C99D /* CookiePortIOS */, DC01BA9E07F323C9FCA89BF3 /* Resources */, 1BADDC1D73C1A20F347483E1 /* Products */, ); sourceTree = "<group>"; };
+  E4F9B9B828BD894C7208C99D /* CookiePortIOS */ = {isa = PBXGroup; children = (671782466DC2E3EBC9B0A189 /* CookiePortIOSApp.swift */, 4B35BDC3A1F5E31EE023848D /* PortViewController.swift */, 33B30773FD3AF7BAC2548B3D /* AssetSchemeHandler.swift */, 17089704BF5954E6B87ED25A /* Info.plist */, ); path = CookiePortIOS; sourceTree = "<group>"; };
+  DC01BA9E07F323C9FCA89BF3 /* Resources */ = {isa = PBXGroup; children = (C6EE613B3EB32F24C2C39282 /* Website */, ); path = CookiePortIOS/Resources; sourceTree = "<group>"; };
+  1BADDC1D73C1A20F347483E1 /* Products */ = {isa = PBXGroup; children = (71CCD365E3A654DA84DBA191 /* CookiePortIOS.app */, ); name = Products; sourceTree = "<group>"; };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+  42AEFBAE01D2DFD981F7DA7D /* CookiePortIOS */ = {isa = PBXNativeTarget; buildConfigurationList = 354589B28580510B6EC24620 /* Build configuration list for PBXNativeTarget "CookiePortIOS" */; buildPhases = (7A70D71C385290AF96BF1031 /* Sources */, 424153ED3CD079DB4DB459AF /* Frameworks */, 285BB1C1430063331E9F5DD0 /* Resources */, ); buildRules = (); dependencies = (); name = CookiePortIOS; productName = CookiePortIOS; productReference = 71CCD365E3A654DA84DBA191 /* CookiePortIOS.app */; productType = "com.apple.product-type.application"; };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+  46F86FAA6BBF9AC94A7E4595 /* Project object */ = {isa = PBXProject; attributes = {BuildIndependentTargetsInParallel = YES; LastUpgradeCheck = 1600; TargetAttributes = { 42AEFBAE01D2DFD981F7DA7D = { CreatedOnToolsVersion = 16.0; LastSwiftMigration = 1600; }; }; }; buildConfigurationList = 1F4E3D13C2320EDA50221924 /* Build configuration list for PBXProject */; compatibilityVersion = "Xcode 14.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en, Base, ); mainGroup = E2B7E3AD4D3F1D1D50F03CDC; productRefGroup = 1BADDC1D73C1A20F347483E1; projectDirPath = ""; projectRoot = ""; targets = (42AEFBAE01D2DFD981F7DA7D /* CookiePortIOS */, ); };
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+  285BB1C1430063331E9F5DD0 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (9D31D013C50B1D1BF22B6A85 /* Website in Resources */, ); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+  7A70D71C385290AF96BF1031 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (6E64CC9FE7BDED02D647D3E3 /* CookiePortIOSApp.swift in Sources */, A2CA8802D69F4397415B8876 /* PortViewController.swift in Sources */, CAE20096E9FE983532E5C104 /* AssetSchemeHandler.swift in Sources */, ); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+  92E165A9035A603BE73D2E62 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; CODE_SIGN_STYLE = Automatic; DEBUG_INFORMATION_FORMAT = dwarf; ENABLE_TESTABILITY = YES; IPHONEOS_DEPLOYMENT_TARGET = 15.0; SDKROOT = iphoneos; SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; }; name = Debug; };
+  E1D3BBA94590957B0374D6E9 /* Release */ = {isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; CODE_SIGN_STYLE = Automatic; DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym"; IPHONEOS_DEPLOYMENT_TARGET = 15.0; SDKROOT = iphoneos; SWIFT_COMPILATION_MODE = wholemodule; SWIFT_OPTIMIZATION_LEVEL = "-O"; }; name = Release; };
+  F22D2FFCC45240A8FF5EBE4A /* Debug */ = {isa = XCBuildConfiguration; buildSettings = { ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = CookiePortIOS/Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 15.0; MARKETING_VERSION = 0.1.0; PRODUCT_BUNDLE_IDENTIFIER = dev.unofficial.cookieport.ios; PRODUCT_NAME = "$(TARGET_NAME)"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = "1,2"; }; name = Debug; };
+  FE4F802C632EAD717BA35062 /* Release */ = {isa = XCBuildConfiguration; buildSettings = { ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = CookiePortIOS/Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 15.0; MARKETING_VERSION = 0.1.0; PRODUCT_BUNDLE_IDENTIFIER = dev.unofficial.cookieport.ios; PRODUCT_NAME = "$(TARGET_NAME)"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = "1,2"; }; name = Release; };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+  1F4E3D13C2320EDA50221924 /* Build configuration list for PBXProject */ = {isa = XCConfigurationList; buildConfigurations = (92E165A9035A603BE73D2E62 /* Debug */, E1D3BBA94590957B0374D6E9 /* Release */, ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+  354589B28580510B6EC24620 /* Build configuration list for PBXNativeTarget "CookiePortIOS" */ = {isa = XCConfigurationList; buildConfigurations = (F22D2FFCC45240A8FF5EBE4A /* Debug */, FE4F802C632EAD717BA35062 /* Release */, ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+/* End XCConfigurationList section */
+ };
+ rootObject = 46F86FAA6BBF9AC94A7E4595 /* Project object */;
+}

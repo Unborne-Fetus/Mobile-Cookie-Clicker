@@ -1,0 +1,30 @@
+COOKIE CLICKER ANDROID - MERGED PRIVATE TEST PROJECT
+===================================================
+
+NO ANDROID STUDIO REQUIRED.
+
+1. Extract this entire ZIP to a new folder on your Windows PC.
+2. Double-click START-HERE.bat.
+3. The first run may ask about installing Java and accepting Android SDK licenses.
+4. The builder adds Wooden Panel Resizer v1.7 and your other installed Steam mods.
+5. On the ☰ menu in the APK, check live Steam player-based Herald status.
+6. When the build succeeds, look for:
+   app\build\outputs\apk\debug\app-debug.apk
+
+START-HERE.bat will import the game files from your own Steam installation
+if they aren't already present. If Steam installed the game in a different
+folder, it will ask for its location.
+
+If you already copied the game into a previous copy of the project, you can
+instead move the entire folder app\src\main\assets\game into this version,
+or let START-HERE.bat copy it again from Steam.
+
+For manual builds, double-click build-apk.bat.
+
+IMPORTANT:
+- The ZIP includes the Android app source and both build scripts, not Cookie
+  Clicker's copyrighted game files or a precompiled APK.
+- A successful build does not guarantee the desktop game runs correctly on
+  Android. This experimental port still requires device testing and fixes.
+- This is for private use; don't redistribute an APK containing game assets
+  unless you have permission from the relevant rights holders.

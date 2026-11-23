@@ -1,0 +1,84 @@
+name: Publish Android and iOS builder packages
+
+# Release from the unified repository. Changes to main do not overwrite a
+# published release until a version is explicitly selected or tagged.
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Release tag (e.g. v0.1.1). Run from main.'
+        required: true
+        type: string
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out release source
+        uses: actions/checkout@v4
+
+      - name: Check source trees and refuse private game imports
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f android/README.md
+          test -f android/START-HERE.bat
+          test -f android/app/src/main/java/dev/unofficial/cookieport/MainActivity.java
+          test -f ios/README.md
+          test -f ios/BUILD-IPA.command
+          test -f ios/CookiePortIOS/PortViewController.swift
+          for dir in android/app/src/main/assets/game ios/CookiePortIOS/Resources/Website/game; do
+            if find "$dir" -type f ! -name '.gitkeep' -print -quit | grep -q .; then
+              echo "Refusing to publish imported game files in $dir"
+              exit 1
+            fi
+          done
+
+      - name: Create separate Android and iOS source ZIPs
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p dist
+          (cd android && zip -q -r ../dist/Cookie-Clicker-Android-Builder.zip . \
+            -x '.git/*' 'app/build/*' 'app/src/main/assets/game/*')
+          (cd ios && zip -q -r ../dist/Cookie-Clicker-iOS-IPA-Builder.zip . \
+            -x '.git/*' 'CookiePortIOS/Resources/Website/game/*' 'output/*' '.build/*')
+          unzip -tq dist/Cookie-Clicker-Android-Builder.zip >/dev/null
+          unzip -tq dist/Cookie-Clicker-iOS-IPA-Builder.zip >/dev/null
+
+      - name: Publish one release with two separate downloads
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ inputs.version || github.ref_name }}
+        run: |
+          set -euo pipefail
+          case "$VERSION" in
+            v[0-9]*) ;;
+            *) echo "Version must begin with v followed by a number"; exit 1 ;;
+          esac
+          cat > release-notes.md <<'EOF'
+          ## Mobile Cookie Clicker source builders
+
+          - **Android:** `Cookie-Clicker-Android-Builder.zip` — Java/WebView shell, import utilities, bundled compatibility mod and local APK builder. On Windows run `START-HERE.bat`.
+          - **iOS:** `Cookie-Clicker-iOS-IPA-Builder.zip` — Swift/Xcode shell, preparation utilities and local IPA builder. Prepare privately, then build/sign on a Mac with Xcode.
+
+          Neither ZIP contains the proprietary game assets or third-party installed mods; neither ZIP is a prebuilt APK or IPA. Android and iOS remain experimental and require hardware testing. A finished game-containing app must not be redistributed without appropriate permissions.
+
+          [Documentation](https://github.com/Unborne-Fetus/Mobile-Cookie-Clicker#readme)
+          EOF
+          if gh release view "$VERSION" >/dev/null 2>&1; then
+            gh release upload "$VERSION" dist/*.zip --clobber
+            gh release edit "$VERSION" --notes-file release-notes.md
+          else
+            gh release create "$VERSION" dist/*.zip \
+              --target "$GITHUB_SHA" \
+              --title "Mobile Cookie Clicker $VERSION (source builders)" \
+              --notes-file release-notes.md
+          fi

@@ -1,0 +1,11 @@
+{
+  "Name": "Wooden Panel Resizer (PC + Android)",
+  "ID": "CookiePort Android Panel Resizer",
+  "Author": "CookiePort",
+  "Description": "Vanilla-textured mouse/touch panel resizing and responsive Store cards and black control bars, including separate mods. Supports Cookie-dunker and Stifling the press without automatic awards.",
+  "ModVersion": "1.7.0",
+  "GameVersion": "2.053",
+  "Date": "2026-11-23",
+  "Dependencies": [],
+  "Disabled": 0
+}

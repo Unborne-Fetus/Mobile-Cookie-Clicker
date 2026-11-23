@@ -1,0 +1,12 @@
+ANDROID BUILDER / STANDALONE MOD — v1.7
+======================================
+The standalone Wooden Panel Resizer remains independently installable on PC.
+The Android builder now AUTO-PACKAGES its included copy on every build,
+without requiring installation in Steam. This behavior was explicitly
+requested; it supersedes the previous opt-in version.
+
+The builder also snapshots your other installed Steam mods. It skips older
+resizer copies with the same mod ID to avoid duplicate loading.
+
+Your game assets and unrelated Steam mods are never inside the downloaded
+builder ZIP. They are copied locally when you run START-HERE.bat.

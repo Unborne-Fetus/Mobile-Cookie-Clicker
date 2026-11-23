@@ -1,0 +1,32 @@
+Cookie Clicker Android - Steam mod ZIP build fix
+================================================
+
+Fixed in this version:
+  FileExistsError: [WinError 183] ... Temp\\cookie-mod-pack-*\\unzipped-*
+
+Cause:
+  Earlier builds named ZIP extraction folders from the number of mods
+  successfully packaged. If an archive was invalid or skipped, that count
+  didn't change. A subsequent archive reused the same folder and crashed.
+
+Change:
+  Every archive now gets its own unique temporary extraction directory.
+  Invalid/corrupt ZIP files are reported as warnings instead of aborting the
+  whole mod snapshot. Safe ZIP path checks are preserved.
+
+To use:
+  1) Extract this full ZIP (it includes the Android project and build tools).
+  2) Open cookie-clicker-android-port and double-click START-HERE.bat.
+  3) The script copies your own Steam game assets and currently installed mods.
+  4) Check for "PACKAGED N mod(s) from Steam" before the Gradle APK build.
+  5) Find the result under app\build\outputs\apk\debug\app-debug.apk.
+
+No Android Studio required. Java and Android SDK downloaded by the earlier
+builder can be reused. This source ZIP does NOT include the commercial game
+or any Steam/Workshop mod files. Do not redistribute the built APK without
+appropriate permissions.
+
+Tested: Python ZIP snapshot script, including invalid ZIPs, nested valid
+Workshop mods, duplicates, repeated builds, and JavaScript loader unit test.
+Not verified: full Windows Gradle build with your exact installed Steam mods,
+or Android runtime behavior for all mods.

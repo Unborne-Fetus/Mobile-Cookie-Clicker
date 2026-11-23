@@ -1,0 +1,13 @@
+.cookie-steam-path
+CookiePortIOS/Resources/Website/game/**
+!CookiePortIOS/Resources/Website/game/.gitkeep
+CookiePortIOS/Resources/Website/mods/**
+!CookiePortIOS/Resources/Website/mods/.gitkeep
+output/**
+!output/.gitkeep
+.build/
+*.xcuserstate
+xcuserdata/
+__pycache__/
+*.ipa
+*.xcarchive/
