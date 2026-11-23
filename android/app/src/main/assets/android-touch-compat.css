@@ -1,0 +1,17 @@
+/* Android WebView touch compatibility. No base-game sources are modified. */
+html,body,#game,#game * {
+    -webkit-tap-highlight-color: transparent !important;
+}
+/* Game panels are interactive UI, not selectable article text. Avoid accidental
+   long-press selection while keeping real text-entry and save boxes usable. */
+#game, #game * {
+    -webkit-user-select: none !important;
+    user-select: none !important;
+    -webkit-touch-callout: none;
+}
+#game input, #game textarea, #game select, #game [contenteditable="true"],
+#game [contenteditable="true"] * {
+    -webkit-user-select: text !important;
+    user-select: text !important;
+    -webkit-touch-callout: default;
+}

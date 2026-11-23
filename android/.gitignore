@@ -1,0 +1,12 @@
+.gradle/
+.idea/
+**/build/
+local.properties
+*.iml
+# The game files belong to Orteil/DashNet. Never commit them.
+app/src/main/assets/game/*
+!app/src/main/assets/game/.gitkeep
+
+# Every mod is obtained from user's own local Steam installation at build time.
+app/src/main/assets/mods/
+.cookie-steam-path

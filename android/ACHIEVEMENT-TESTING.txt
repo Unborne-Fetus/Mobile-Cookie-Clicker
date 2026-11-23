@@ -1,0 +1,17 @@
+COOKIE CLICKER ANDROID — RESIZE ACHIEVEMENT TESTS
+
+1. Back up your save using the app menu before installing a new APK.
+2. Rebuild with START-HERE.bat and install/update your private APK.
+3. For Stifling the press:
+   - Open the native ☰ menu -> Toggle narrow window.
+   - Open Check achievement layout status: width must be below 900px.
+   - Tap the news ticker. Restore normal window layout afterward.
+4. For Cookie-dunker:
+   - Earn at least 3 regular achievements.
+   - Open the native ☰ menu -> Toggle short cookie panel.
+   - The game's native logic should register the visual milk overlap.
+   - Restore the normal layout after the achievement.
+5. If either fails, capture the new layout status screen.
+
+These controls change UI geometry only and never directly grant achievements.
+The APK is not included; original game code/assets are not included.
